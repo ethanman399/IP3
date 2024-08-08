@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        .container-custom {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .container-custom-scotland {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <h1>COVID-19 Data Visualization</h1>
+        <nav class="nav justify-content-center">
+            <a class="nav-link text-blue" href="index.html">Home</a>
+            <a class="nav-link text-blue" href="links.html">Useful Links</a>
+        </nav>
+    </header>
+    <main>
+        <section class="container-custom-scotland mt-5" id="scotland-stats">
+            <h2 class="text-center">Scotland COVID-19 Statistics</h2>
+            <canvas id="scotlandChart"></canvas>
+            <p id="lastUpdatedScotland" class="text-center mt-3"></p>
+        </section>
+        <section class="container-custom mt-5" id="uk-stats">
+            <h2 class="text-center">UK COVID-19 Statistics</h2>
+            <canvas id="ukChart"></canvas>
+            <p id="lastChangedUK" class="text-center mt-3"></p>
+            <p id="lastUpdatedUK" class="text-center mt-3"></p>
+        </section>
+        <section class="container-custom mt-5" id="world-map">
+            <h2 class="text-center">COVID-19 Cases by Country</h2>
+            <div id="map" style="height: 600px;"></div>
+            <p class="text-center mt-3">Last updated: 09/03/2023</p>
+        </section>
+        <section class="container-custom mt-5" id="covid-stats">
+            <h2 class="text-center">World COVID-19 History</h2>
+            <canvas id="covidChart"></canvas>
+            <p class="text-center mt-3">Last updated: 09/03/2023</p>
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>IP3 Resit: COVID-19 Data Visualisation</p>
+        <p>Ethan Man</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
